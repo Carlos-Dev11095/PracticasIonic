@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>componentes</ion-title>
+
+        <ion-back-button slot="start" defaultHref="/" text="atras" color="primary"></ion-back-button>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-button>Activo</ion-button>
+    <ion-button [disabled]="true">Inactivo</ion-button>
+    <ion-button fill="outline">Sin relleno</ion-button>
+
+    <ion-button>
+        <ion-icon slot="icon-only" name="home"></ion-icon>
+    </ion-button>
+
+    <ion-button expand="block">Block</ion-button>
+    <ion-button expand="full">Full</ion-button>
+
+    <ion-button shape="round">Redondo</ion-button>
+    <ion-button color="secondary">Color secundario</ion-button>
+
+
+</ion-content>
