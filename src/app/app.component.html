@@ -1,3 +1,20 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+    <ion-menu side="start" menuId="first" contentId="main">
+        <ion-header>
+            <ion-toolbar color="primary">
+                <ion-title>Menu</ion-title>
+            </ion-toolbar>
+        </ion-header>
+        <ion-content class="ion-padding ">
+            <ion-list>
+                <ion-menu-toggle>
+                    <ion-item *ngFor="let item of elementos" [routerLink]="item.ruta" detail>
+                        <ion-icon name="{{item.icono}}" slot="start"></ion-icon>
+                        {{item.nombre}}
+                    </ion-item>
+                </ion-menu-toggle>
+            </ion-list>
+        </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>

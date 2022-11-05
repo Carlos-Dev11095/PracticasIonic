@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { NoticiasPageRoutingModule } from './noticias-routing.module';
 
 import { NoticiasPage } from './noticias.page';
+import { ComponentesModule } from '../../componentes/componentes.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    NoticiasPageRoutingModule
+    NoticiasPageRoutingModule,
+    ComponentesModule,
   ],
   declarations: [NoticiasPage]
 })
