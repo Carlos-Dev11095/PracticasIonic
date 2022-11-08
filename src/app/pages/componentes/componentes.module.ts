@@ -8,6 +8,7 @@ import { ComponentesPageRoutingModule } from './componentes-routing.module';
 
 import { ComponentesPage } from './componentes.page';
 import { ComponentesModule } from '../../componentes/componentes.module';
+import { DetalleComponent } from '../../componentes/detalle/detalle.component';
 
 @NgModule({
   imports: [
@@ -17,6 +18,9 @@ import { ComponentesModule } from '../../componentes/componentes.module';
     ComponentesPageRoutingModule,
     ComponentesModule,
   ],
-  declarations: [ComponentesPage]
+  declarations: [ComponentesPage,DetalleComponent],
+  exports:[
+    DetalleComponent
+    ],
 })
 export class ComponentesPageModule {}
