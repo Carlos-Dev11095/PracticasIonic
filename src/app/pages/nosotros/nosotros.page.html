@@ -5,7 +5,7 @@
     <ion-slides [options]="opcionesSlide">
         <ion-slide *ngFor="let cubo of CubosRecientes">
 
-            <ion-card>
+            <ion-card (click)="verDetalle(cubo.id)">
                 <img [src]="cubo.img" style="height: 30vh; width: 60vh">
                 <ion-card-header>
                     <ion-card-title>{{cubo.Caras}}</ion-card-title>
