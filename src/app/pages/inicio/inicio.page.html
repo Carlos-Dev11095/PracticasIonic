@@ -8,17 +8,14 @@
 </ion-header>
 
 <ion-content>
-    <!-- <ion-button routerLink="/nosotros">Nosotros</ion-button>
-    <ion-button routerLink="/noticias">Noticias</ion-button>
-    <ion-button routerLink="/componentes">Componentes</ion-button> -->
     <ion-slides [options]="opcionesSlide">
         <ion-slide *ngFor="let personaje of personajesRecientes">
 
             <ion-card (click)="verDetalle(personaje.id)">
-                <img [src]="personaje.avatar" style="height: 30vh; width: 60vh">
+                <img [src]="personaje.image" style="height: 30vh; width: 60vh">
                 <ion-card-header>
-                    <ion-card-title>{{personaje.first_name}}</ion-card-title>
-                    <ion-card-subtitle>{{personaje.last_name}}</ion-card-subtitle>
+                    <ion-card-title>{{personaje.name}}</ion-card-title>
+                    <ion-card-subtitle>{{personaje.gender}}</ion-card-subtitle>
                 </ion-card-header>
             </ion-card>
         </ion-slide>
