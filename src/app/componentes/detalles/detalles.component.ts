@@ -1,5 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { CubosService } from 'src/app/services/cubos.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-detalles',
@@ -7,17 +6,7 @@ import { CubosService } from 'src/app/services/cubos.service';
   styleUrls: ['./detalles.component.scss'],
 })
 export class DetallesComponent implements OnInit {
-  Detallereciente:Cubo={}
-  Cuboreciente:Cubos[]=[];
-  constructor(private servicioCubos: CubosService) { }
 
-  @Input()id:number
-  ngOnInit() {
-    this.servicioCubos.getCubos(this.id).subscribe((resp:Cubos)=>{
-      console.log('Cubos',resp)
-      this.Detallereciente=resp.results;
-    })
-  }
   constructor() { }
 
   ngOnInit() {}
