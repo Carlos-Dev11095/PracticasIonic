@@ -1,16 +1,16 @@
 <ion-content>
 
     <ion-label class="titulo">
-        <h1>{{Personajereciente1.name}}</h1>
+        <h1>{{DetallePersonaje.name}}</h1>
     </ion-label>
 
-    <img class="imagen" [src]="Personajereciente1.image" *ngIf="Personajereciente1.image">
+    <img class="imagen" [src]="DetallePersonaje.image" *ngIf="DetallePersonaje.image">
 </ion-content>
 <ion-grid fixed>
     <ion-row>
         <ion-col size="4" class="detalle">
             <ion-card class="poster">
-                <img [src]="Personajereciente1.image" *ngIf="Personajereciente1.image">
+                <img [src]="DetallePersonaje.image" *ngIf="DetallePersonaje.image">
             </ion-card>
         </ion-col>
 
@@ -21,9 +21,6 @@
                 <ion-note slot="end" color="primary">X10</ion-note>
             </ion-item>
         </ion-col>
-
-
-
     </ion-row>
 </ion-grid>
 
@@ -32,7 +29,7 @@
         <ion-card-subtitle>Descripción</ion-card-subtitle>
     </ion-card-header>
     <ion-card-content>
-        {{Personajereciente1.species}}
+        {{DetallePersonaje.species}}
     </ion-card-content>
 </ion-card>
 

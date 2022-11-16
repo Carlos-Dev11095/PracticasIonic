@@ -71,19 +71,22 @@ export interface RespuestaDB {
 }
 
 export interface Cubo {
-  Caras: number;
-  Categoria: string;
-  Forma: string;
-  Id: number;
-  altura: number;
-  img: string;
+  Caras?: number;
+  Categoria?: string;
+  Forma?: string;
+  colores?:string;
+  id?: number;
+  altura?: number;
+  img?: string;
 }
 
 export interface Cubos {
-  Caras: number;
-  Categoria: string;
-  Forma: string;
-  Id: number;
-  altura: number;
-  img: string;
+  Caras?: number;
+  Categoria?: string;
+  Forma?: string;
+  colores?:string;
+  id?: number;
+  altura?: number;
+  img?: string;
 }
+

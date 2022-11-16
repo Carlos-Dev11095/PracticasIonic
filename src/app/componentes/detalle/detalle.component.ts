@@ -8,7 +8,7 @@ import { Personajes,Personaje } from '../../interfaces/interfaces';
   styleUrls: ['./detalle.component.scss'],
 })
 export class DetalleComponent implements OnInit {
-  Personajereciente1:Personaje={}
+  DetallePersonaje:Personaje={}
   Personajereciente:Personajes[]=[];
   constructor(private servicioPersonajes: PersonajesService,private modalCtrl:ModalController) { }
   regresar(){this.modalCtrl.dismiss();}
@@ -17,7 +17,7 @@ export class DetalleComponent implements OnInit {
     this.servicioPersonajes.getPersonaje(this.id).subscribe(console.log)
     this.servicioPersonajes.getPersonaje(this.id).subscribe((resp:Personaje)=>{
       console.log('Personaje',resp)
-      this.Personajereciente1=resp;
+      this.DetallePersonaje=resp;
       
     })
   }

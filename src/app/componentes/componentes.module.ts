@@ -2,12 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { IonicModule } from '@ionic/angular';
+import { DetallesComponent } from 'src/app/componentes/detalles/detalles.component';
 
 
 
 @NgModule({
-  declarations: [ HeaderComponent],
-  exports:[HeaderComponent],
+  declarations: [ HeaderComponent,DetallesComponent],
+  exports:[HeaderComponent,DetallesComponent],
   imports: [
     CommonModule,
     IonicModule,
