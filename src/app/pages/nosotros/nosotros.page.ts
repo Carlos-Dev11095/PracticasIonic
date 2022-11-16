@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { DetallesComponent } from 'src/app/componentes/detalles/detalles.component';
-import { Cubo, RespuestaDB } from 'src/app/interfaces/interfaces';
+import { Cubo, Cubos, RespuestaDB } from 'src/app/interfaces/interfaces';
 import { CubosService } from '../../services/cubos.service';
 @Component({
   selector: 'app-nosotros',
@@ -9,7 +9,7 @@ import { CubosService } from '../../services/cubos.service';
   styleUrls: ['./nosotros.page.scss'],
 })
 export class NosotrosPage implements OnInit {
-  CubosRecientes:Cubo[]=[] ;
+  CubosRecientes:Cubos[]=[] ;
   opcionesSlide={
     slidesPerView:1.1,
     freeMode:true
