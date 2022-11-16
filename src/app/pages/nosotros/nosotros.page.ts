@@ -25,7 +25,7 @@ export class NosotrosPage implements OnInit {
     modal.present();
     }
   ngOnInit() {
-    this.servicioCubos.getCubos()
+    this.servicioCubos.getDatos()
     .subscribe((resp:RespuestaDB)=>{//1
     console.log('Cubos',resp)
     this.CubosRecientes=resp.Cubos;

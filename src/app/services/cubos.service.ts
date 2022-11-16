@@ -7,7 +7,11 @@ import { Injectable } from '@angular/core';
 export class CubosService {
 
   constructor(private http:HttpClient) { }
-  getCubos(){
-    return this.http.get('https://proyecto-36245-default-rtdb.firebaseio.com/.json');
+
+  getDatos(){
+    return this.http.get('https://proyecto-36245-default-rtdb.firebaseio.com/.json')
+  }
+  getCubos(id:number){
+    return this.http.get('https://proyecto-36245-default-rtdb.firebaseio.com/.json'+id);
     }
 }
