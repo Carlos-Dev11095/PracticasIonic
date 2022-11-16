@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular/providers/modal-controller';
+import { DetallesComponent } from 'src/app/componentes/detalles/detalles.component';
 import { Cubo, RespuestaDB } from 'src/app/interfaces/interfaces';
 import { CubosService } from '../../services/cubos.service';
 @Component({
@@ -7,9 +9,20 @@ import { CubosService } from '../../services/cubos.service';
   styleUrls: ['./nosotros.page.scss'],
 })
 export class NosotrosPage implements OnInit {
-  CubosRecientes: Cubo[] = [] 
-  constructor(private servicioCubos:CubosService) { }
+  CubosRecientes:Cubo[]=[] ;
+opcionesSlide={
+  slidesPerView:1.1,
+  freeMode:true
+  }
 
+  constructor(private servicioCubos:CubosService,private modalCtrl:ModalController) { }
+  async verDetalle(id: number){
+    const modal= await this.modalCtrl.create({
+      component:DetallesComponent,
+      componentProps:{id}
+  });
+  modal.present();
+}
   ngOnInit() {
     this.servicioCubos.getCubos()
     .subscribe((resp:RespuestaDB)=>{//1
