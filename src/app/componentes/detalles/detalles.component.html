@@ -1,6 +1,6 @@
 <ion-header>
     <ion-toolbar>
-        <ion-title>Especificaciones De Rubick</ion-title>
+        <ion-title>Especificaciones De Rubik</ion-title>
     </ion-toolbar>
 </ion-header>
 <ion-content class="ion-padding">
@@ -11,10 +11,18 @@
         </ion-avatar>
         <ion-label>
             <h1>
-                <h>Colores:{{DetalleCubo.colores}}</h>
+                {{DetalleCubo.id}}
             </h1>
-            <p>Altura:{{DetalleCubo.altura_en_cm}}</p>
+            <h1>
+                Colores:{{DetalleCubo.colores}}
+            </h1>
+            <h1>
+                Altura en cm:{{DetalleCubo.altura_en_cm}}
+            </h1>
+            
+            <h1>Caras:{{DetalleCubo.Caras}}</h1>
         </ion-label>
+
     </ion-item>
 
 </ion-content>
