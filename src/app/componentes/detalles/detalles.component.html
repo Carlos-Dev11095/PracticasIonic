@@ -1,17 +1,19 @@
 <ion-header>
     <ion-toolbar>
-        <ion-title>Cubos De rubick</ion-title>
+        <ion-title>Especificaciones De Rubick</ion-title>
     </ion-toolbar>
 </ion-header>
 <ion-content class="ion-padding">
+
     <ion-item>
         <ion-avatar slot="start">
             <img [src]="DetalleCubo.img" *ngIf="DetalleCubo.img">
         </ion-avatar>
         <ion-label>
-            <h2>{{DetalleCubo.colores}}</h2>
-
-            <p>{{DetalleCubo.Categoria}}</p>
+            <h1>
+                <h>Colores:{{DetalleCubo.colores}}</h>
+            </h1>
+            <p>Altura:{{DetalleCubo.altura_en_cm}}</p>
         </ion-label>
     </ion-item>
 

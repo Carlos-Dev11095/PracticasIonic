@@ -38,7 +38,7 @@ export interface Cubos {
   Forma?: string;
   colores?:string;
   id?: number;
-  altura?: number;
+  altura_en_cm?: number;
   img?: string;
 }
 
@@ -49,7 +49,7 @@ export interface Cubo {
   Forma?: string;
   colores?:string;
   id?: number;
-  altura?: number;
+  altura_en_cm?: number;
   img?: string;
   nombre?:string;
 }
