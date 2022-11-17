@@ -51,4 +51,5 @@ export interface Cubo {
   id?: number;
   altura?: number;
   img?: string;
+  nombre?:string;
 }
