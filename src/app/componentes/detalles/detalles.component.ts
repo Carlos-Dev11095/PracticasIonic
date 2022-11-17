@@ -1,7 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-import { Cubo, Cubos } from 'src/app/interfaces/interfaces';
+import {  } from 'src/app/interfaces/interfaces';
 import { CubosService } from '../../services/cubos.service';
+import { Cubo } from '../../interfaces/interfaces';
 
 @Component({
   selector: 'app-detalles',
@@ -9,15 +10,17 @@ import { CubosService } from '../../services/cubos.service';
   styleUrls: ['./detalles.component.scss'],
 })
 export class DetallesComponent implements OnInit {
+  @Input()id:number=0;
   DetalleCubo:Cubo={}
-  Cuboreciente:Cubos[]=[];
+
   constructor(private servicioCubos:CubosService,private modalCtrl:ModalController) { }
   regresar(){this.modalCtrl.dismiss();}
-@Input()id:number
+
   ngOnInit() {
-    this.servicioCubos.getCubos().subscribe((resp:Cubo) =>{
-console.log('DetalleCubo',resp)
-this.DetalleCubo=resp;
+    this.servicioCubos.getCubos(this.id)
+    .subscribe((resp:Cubo)=>{
+      console.log('CuboDetalle',resp);
+      this.DetalleCubo=(resp);
     })
   }
 

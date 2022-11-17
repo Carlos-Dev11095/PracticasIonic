@@ -42,6 +42,7 @@ export interface Cubos {
   img?: string;
 }
 
+
 export interface Cubo {
   Caras?: number;
   Categoria?: string;
@@ -51,4 +52,3 @@ export interface Cubo {
   altura?: number;
   img?: string;
 }
-

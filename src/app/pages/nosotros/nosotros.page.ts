@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { DetallesComponent } from 'src/app/componentes/detalles/detalles.component';
-import { Cubo, Cubos, RespuestaDB } from 'src/app/interfaces/interfaces';
+import { Cubos, RespuestaDB } from 'src/app/interfaces/interfaces';
 import { CubosService } from '../../services/cubos.service';
 @Component({
   selector: 'app-nosotros',

@@ -9,7 +9,8 @@
             <ion-img src="https://i.pravatar.cc/300?u=b"></ion-img>
         </ion-avatar>
         <ion-label>
-            <h2>{{DetalleCubo.Caras}}</h2>
+            <h2>{{DetalleCubo.id}}</h2>
+            <img [src]="DetalleCubo.img" *ngIf="DetalleCubo.img">
             <p>Sales Rep</p>
         </ion-label>
     </ion-item>
