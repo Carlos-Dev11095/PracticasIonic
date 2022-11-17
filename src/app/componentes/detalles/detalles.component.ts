@@ -15,8 +15,7 @@ export class DetallesComponent implements OnInit {
   regresar(){this.modalCtrl.dismiss();}
 @Input()id:number
   ngOnInit() {
-    this.servicioCubos.getCubos(this.id).subscribe(console.log)
-    this.servicioCubos.getCubos(this.id).subscribe((resp:Cubo) =>{
+    this.servicioCubos.getCubos().subscribe((resp:Cubo) =>{
 console.log('DetalleCubo',resp)
 this.DetalleCubo=resp;
     })
