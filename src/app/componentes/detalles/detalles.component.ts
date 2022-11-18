@@ -11,7 +11,7 @@ import { Cubo } from '../../interfaces/interfaces';
 })
 export class DetallesComponent implements OnInit {
   @Input()id:number=0;
-  DetalleCubo:Cubo={}
+  DetalleArmadura:Cubo={}
 
   constructor(private servicioCubos:CubosService,private modalCtrl:ModalController) { }
   regresar(){this.modalCtrl.dismiss();}
@@ -20,7 +20,7 @@ export class DetallesComponent implements OnInit {
     this.servicioCubos.getCubos(this.id)
     .subscribe((resp:Cubo)=>{
       console.log('CuboDetalle',resp);
-      this.DetalleCubo=(resp);
+      this.DetalleArmadura=(resp);
     })
   }
 

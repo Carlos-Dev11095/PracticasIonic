@@ -11,7 +11,7 @@ import { CubosService } from '../../services/cubos.service';
 export class NosotrosPage implements OnInit {
   CubosRecientes:Cubos[]=[] ;
   opcionesSlide={
-    slidesPerView:4.5,
+    slidesPerView:2.2,
     freeMode:true
     }
 
