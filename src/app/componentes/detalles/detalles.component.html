@@ -1,46 +1,29 @@
 <ion-header>
     <ion-toolbar>
-        <ion-title>Armaduras Especiales</ion-title>
+        <ion-title>Especificaciones De Rubik</ion-title>
     </ion-toolbar>
 </ion-header>
 <ion-content class="ion-padding">
 
-    <ion-card>
-        <ion-card-header>
-            <ion-card-title>Armaduras de Halo</ion-card-title>
-            <ion-card-subtitle>Con escudo de protección</ion-card-subtitle>
-        </ion-card-header>
-        <ion-card-content>
-            <ion-list>
-                <ion-item>
-                    <ion-thumbnail slot="start">
-                        <img [src]="DetalleArmadura.img" *ngIf="DetalleArmadura.img">
-                    </ion-thumbnail>
-                    Armadura No:{{DetalleArmadura.id}}
-                </ion-item>
+    <ion-item>
+        <ion-avatar slot="start">
+            <img [src]="DetalleCubo.img" *ngIf="DetalleCubo.img">
+        </ion-avatar>
+        <ion-label>
+            <h1>
+                {{DetalleCubo.id}}
+            </h1>
+            <h1>
+                Colores:{{DetalleCubo.colores}}
+            </h1>
+            <h1>
+                Altura en cm:{{DetalleCubo.altura_en_cm}}
+            </h1>
 
-                <ion-item>
-                    <ion-thumbnail slot="start">
-                    </ion-thumbnail>
-                    <ion-label> Tipo de armadura: {{DetalleArmadura.armadura}}</ion-label>
-                </ion-item>
+            <h1>Caras:{{DetalleCubo.Caras}}</h1>
+        </ion-label>
 
-                <ion-item>
-                    <ion-thumbnail slot="start">
-                    </ion-thumbnail>
-                    <ion-label> Color:{{DetalleArmadura.color}}</ion-label>
-                </ion-item>
-
-                <ion-item lines="none">
-                    <ion-thumbnail slot="start">
-                    </ion-thumbnail>
-                    <ion-label>
-                        Modelo:{{DetalleArmadura.modelo}}
-                    </ion-label>
-                </ion-item>
-            </ion-list>
-        </ion-card-content>
-    </ion-card>
+    </ion-item>
 
 </ion-content>
 

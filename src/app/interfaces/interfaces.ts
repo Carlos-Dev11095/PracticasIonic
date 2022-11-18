@@ -33,23 +33,23 @@ export interface RespuestaDB {
 }
 
 export interface Cubos {
-  armadura?: number;
-  color?: string;
-  generacion?: string;
-  modelo?:string;
+  Caras?: number;
+  Categoria?: string;
+  Forma?: string;
+  colores?:string;
   id?: number;
+  altura_en_cm?: number;
   img?: string;
-  nombre?:string;
 }
 
 
 export interface Cubo {
-  armadura?: number;
-  color?: string;
-  generacion?: string;
-  modelo?:string;
+  Caras?: number;
+  Categoria?: string;
+  Forma?: string;
+  colores?:string;
   id?: number;
+  altura_en_cm?: number;
   img?: string;
   nombre?:string;
 }
-

@@ -3,13 +3,13 @@
 
 <ion-content>
     <ion-slides [options]="opcionesSlide">
-        <ion-slide *ngFor="let Armadura of CubosRecientes">
+        <ion-slide *ngFor="let cubo of CubosRecientes">
 
-            <ion-card (click)="verDetalle(Armadura.id)">
-                <img [src]="Armadura.img" style="height: 30vh; width: 60vh">
+            <ion-card (click)="verDetalle(cubo.id)">
+                <img [src]="cubo.img" style="height: 30vh; width: 60vh">
                 <ion-card-header>
-                    <ion-card-title>Nombre:{{Armadura.nombre}}</ion-card-title>
-                    <ion-card-subtitle>{{Armadura.nombre}}</ion-card-subtitle>
+                    <ion-card-title>Nombre:{{cubo.nombre}}</ion-card-title>
+                    <ion-card-subtitle>{{cubo.Forma}}</ion-card-subtitle>
                 </ion-card-header>
             </ion-card>
         </ion-slide>
